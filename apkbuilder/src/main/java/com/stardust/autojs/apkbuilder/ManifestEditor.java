@@ -57,7 +57,7 @@ public class ManifestEditor {
         return this;
     }
     
-    private static byte[] readFully(InputStream is) {
+    private static byte[] readFully(InputStream is) throws IOException {
         byte[] bytes = new byte[is.available()];
         is.read(bytes);
         return bytes;
