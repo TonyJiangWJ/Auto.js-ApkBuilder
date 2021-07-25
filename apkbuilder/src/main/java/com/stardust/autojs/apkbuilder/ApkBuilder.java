@@ -3,8 +3,6 @@ package com.stardust.autojs.apkbuilder;
 
 import com.stardust.autojs.apkbuilder.util.StreamUtils;
 
-import org.apache.commons.io.IOUtils;
-
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
