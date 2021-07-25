@@ -30,5 +30,4 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile files('libs/tiny-sign-0.9.jar')
-    compile files('libs/commons-io-2.5.jar')
 }
