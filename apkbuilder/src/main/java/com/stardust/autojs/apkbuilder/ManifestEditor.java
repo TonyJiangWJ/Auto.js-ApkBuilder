@@ -1,7 +1,5 @@
 package com.stardust.autojs.apkbuilder;
 
-import org.apache.commons.io.IOUtils;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -53,10 +51,16 @@ public class ManifestEditor {
 
     public ManifestEditor commit() throws IOException {
         AxmlWriter writer = new MutableAxmlWriter();
-        AxmlReader reader = new AxmlReader(IOUtils.readFully(mManifestInputStream, mManifestInputStream.available()));
+        AxmlReader reader = new AxmlReader(readFully(mManifestInputStream));
         reader.accept(writer);
         mManifestData = writer.toByteArray();
         return this;
+    }
+    
+    private static byte[] readFully(InputStream is) {
+        byte[] bytes = new byte[is.available()];
+        is.read(bytes);
+        return bytes;
     }
 
 
