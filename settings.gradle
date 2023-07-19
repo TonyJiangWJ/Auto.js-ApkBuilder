@@ -1,1 +1,2 @@
 include ':apkbuilder', ':sample'
+include ':app'
